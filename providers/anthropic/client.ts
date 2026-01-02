@@ -26,7 +26,7 @@ export class AnthropicProvider implements LLMProvider {
     this.client = new Anthropic({
       apiKey: config.apiKey,
     });
-    this.model = config.model || 'claude-3-sonnet-20240229';
+    this.model = config.model || 'claude-3-5-haiku-20241022';
     this.maxTokens = config.maxTokens || 4096;
     this.temperature = config.temperature || 0.3;
   }

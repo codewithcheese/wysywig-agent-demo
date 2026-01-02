@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main, 'claude/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      run_bench:
+        description: 'Run benchmark suite'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+  bench:
+    name: Benchmark Suite
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event.inputs.run_bench == 'true' || github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run benchmark (dry-run check)
+        run: npm run bench -- --dry-run --fixture=simple-one-page --suite=cosmetic
+
+      - name: Run benchmark
+        if: env.ANTHROPIC_API_KEY != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_PROVIDER: anthropic
+          LLM_MODEL: claude-3-5-haiku-20241022
+        run: npm run bench -- --provider=anthropic --model=claude-3-5-haiku-20241022
+
+      - name: Upload results
+        if: env.ANTHROPIC_API_KEY != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results-${{ github.sha }}
+          path: bench/results/
+          retention-days: 30

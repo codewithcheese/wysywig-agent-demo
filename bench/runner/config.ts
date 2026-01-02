@@ -12,7 +12,7 @@ import type { ProviderName } from '../../providers/index.js';
 config();
 
 export const BenchConfigSchema = z.object({
-  provider: z.enum(['openai', 'anthropic']).default('openai'),
+  provider: z.enum(['openai', 'anthropic']).default('anthropic'),
   model: z.string().optional(),
   fixtures: z.array(z.string()).optional(),
   suites: z.array(z.string()).optional(),
@@ -28,7 +28,7 @@ export type BenchConfig = z.infer<typeof BenchConfigSchema>;
 
 export function loadConfig(overrides?: Partial<BenchConfig>): BenchConfig {
   const envConfig: Partial<BenchConfig> = {
-    provider: (process.env.LLM_PROVIDER as ProviderName) || 'openai',
+    provider: (process.env.LLM_PROVIDER as ProviderName) || 'anthropic',
     model: process.env.LLM_MODEL,
     visual: process.env.VISUAL_DIFF_ENABLED === 'true',
     parallel: parseInt(process.env.BENCH_PARALLEL || '1', 10),
