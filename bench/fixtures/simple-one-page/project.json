@@ -1,0 +1,107 @@
+{
+  "assets": [],
+  "styles": [
+    {
+      "selectors": ["#section-hero"],
+      "style": {
+        "padding": "60px 20px",
+        "background-color": "#f5f5f5",
+        "text-align": "center"
+      }
+    },
+    {
+      "selectors": ["#section-hero h1"],
+      "style": {
+        "font-size": "2.5em",
+        "margin-bottom": "20px",
+        "color": "#333"
+      }
+    },
+    {
+      "selectors": ["#section-content"],
+      "style": {
+        "padding": "40px 20px",
+        "max-width": "800px",
+        "margin": "0 auto"
+      }
+    },
+    {
+      "selectors": ["#section-content p"],
+      "style": {
+        "line-height": "1.6",
+        "margin-bottom": "16px"
+      }
+    },
+    {
+      "selectors": ["#section-footer"],
+      "style": {
+        "padding": "30px 20px",
+        "background-color": "#333",
+        "color": "#fff",
+        "text-align": "center"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Main",
+      "component": {
+        "type": "wrapper",
+        "components": [
+          {
+            "type": "default",
+            "tagName": "section",
+            "attributes": { "id": "section-hero" },
+            "components": [
+              {
+                "type": "text",
+                "tagName": "h1",
+                "content": "Welcome to Our Site"
+              },
+              {
+                "type": "text",
+                "tagName": "p",
+                "content": "A simple demonstration of a single-page layout."
+              }
+            ]
+          },
+          {
+            "type": "default",
+            "tagName": "section",
+            "attributes": { "id": "section-content" },
+            "components": [
+              {
+                "type": "text",
+                "tagName": "h2",
+                "content": "About Us"
+              },
+              {
+                "type": "text",
+                "tagName": "p",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              },
+              {
+                "type": "text",
+                "tagName": "p",
+                "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              }
+            ]
+          },
+          {
+            "type": "default",
+            "tagName": "section",
+            "attributes": { "id": "section-footer" },
+            "components": [
+              {
+                "type": "text",
+                "tagName": "p",
+                "content": "© 2024 Example Company. All rights reserved."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

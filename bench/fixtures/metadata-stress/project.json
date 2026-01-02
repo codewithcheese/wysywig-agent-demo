@@ -1,0 +1,14 @@
+{
+  "assets": [],
+  "styles": [],
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Main",
+      "component": {
+        "type": "wrapper",
+        "components": []
+      }
+    }
+  ]
+}

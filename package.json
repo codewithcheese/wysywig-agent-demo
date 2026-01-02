@@ -1,0 +1,41 @@
+{
+  "name": "grapesjs-ai-test-harness",
+  "version": "0.1.0",
+  "description": "Automated test harness for GrapesJS ↔ AI template editing evaluation",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "bench": "tsx bench/runner/cli.ts",
+    "bench:visual": "tsx bench/runner/cli.ts --visual",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "grapesjs": "^0.21.10",
+    "jsdom": "^24.0.0",
+    "dompurify": "^3.0.8",
+    "openai": "^4.24.0",
+    "@anthropic-ai/sdk": "^0.14.0",
+    "commander": "^12.0.0",
+    "dotenv": "^16.3.1",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/jsdom": "^21.1.6",
+    "@types/dompurify": "^3.0.5",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.4",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "vitest": "^1.2.0",
+    "playwright": "^1.41.0"
+  }
+}

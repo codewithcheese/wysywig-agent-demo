@@ -1,0 +1,46 @@
+{
+  "name": "print",
+  "description": "Print-specific changes: page breaks, margins, PDF optimization",
+  "prompts": [
+    {
+      "id": "print-pagebreak-001",
+      "category": "print",
+      "description": "Add page breaks between sections",
+      "prompt": "Add CSS page-break-before or break-before rules so each major section starts on a new page when printed.",
+      "expectedBehavior": "Page break CSS added, structure unchanged",
+      "markerSensitive": false
+    },
+    {
+      "id": "print-avoid-001",
+      "category": "print",
+      "description": "Prevent orphaned elements",
+      "prompt": "Add CSS rules to prevent headings from being orphaned at the bottom of pages. Keep headings together with their following content.",
+      "expectedBehavior": "Page break avoidance CSS added",
+      "markerSensitive": false
+    },
+    {
+      "id": "print-margins-001",
+      "category": "print",
+      "description": "Set print margins",
+      "prompt": "Add a @page CSS rule with 1 inch margins on all sides for print output.",
+      "expectedBehavior": "@page rule added to CSS",
+      "markerSensitive": false
+    },
+    {
+      "id": "print-table-001",
+      "category": "print",
+      "description": "Optimize tables for print",
+      "prompt": "If there are tables, ensure they have visible borders and repeat header rows on each page when printed. Use border-collapse and appropriate cell padding.",
+      "expectedBehavior": "Table print styles added",
+      "markerSensitive": false
+    },
+    {
+      "id": "print-header-001",
+      "category": "print",
+      "description": "Add running header for print",
+      "prompt": "Add a print-only running header that appears at the top of each printed page with the document title.",
+      "expectedBehavior": "Print header CSS added",
+      "markerSensitive": false
+    }
+  ]
+}

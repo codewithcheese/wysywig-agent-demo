@@ -1,0 +1,46 @@
+{
+  "name": "cosmetic",
+  "description": "Cosmetic changes: typography, spacing, colors, alignment",
+  "prompts": [
+    {
+      "id": "cosmetic-typography-001",
+      "category": "cosmetic",
+      "description": "Improve typography for print readability",
+      "prompt": "Improve the typography for better print readability. Increase font sizes for headings, add more line-height to body text, and ensure consistent spacing between sections.",
+      "expectedBehavior": "Font sizes and spacing should change, structure should remain",
+      "markerSensitive": false
+    },
+    {
+      "id": "cosmetic-colors-001",
+      "category": "cosmetic",
+      "description": "Convert to grayscale color scheme",
+      "prompt": "Convert all colors to a grayscale scheme suitable for black and white printing. Replace colored backgrounds with subtle gray tones and ensure sufficient contrast for text.",
+      "expectedBehavior": "Colors should change to grayscale, structure preserved",
+      "markerSensitive": false
+    },
+    {
+      "id": "cosmetic-spacing-001",
+      "category": "cosmetic",
+      "description": "Add print margins and padding",
+      "prompt": "Add generous margins and padding suitable for printed documents. Ensure text doesn't touch edges and sections have clear visual separation.",
+      "expectedBehavior": "Margins and padding values change, elements remain",
+      "markerSensitive": false
+    },
+    {
+      "id": "cosmetic-alignment-001",
+      "category": "cosmetic",
+      "description": "Center align all headings",
+      "prompt": "Center-align all heading elements (h1, h2, h3, etc.) while keeping body text left-aligned.",
+      "expectedBehavior": "Heading alignment changes, content preserved",
+      "markerSensitive": false
+    },
+    {
+      "id": "cosmetic-borders-001",
+      "category": "cosmetic",
+      "description": "Add subtle borders to sections",
+      "prompt": "Add subtle 1px solid gray borders around major sections to create visual separation. Don't add borders to inline elements.",
+      "expectedBehavior": "Border styles added, structure unchanged",
+      "markerSensitive": false
+    }
+  ]
+}

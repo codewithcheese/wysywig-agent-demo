@@ -1,0 +1,22 @@
+{
+  "name": "simple-one-page",
+  "description": "A simple single-page layout with basic sections",
+  "expectedMarkers": [
+    {
+      "pattern": "data-gjs-id",
+      "minCount": 4,
+      "description": "Component ID markers"
+    },
+    {
+      "pattern": "data-gjs-type",
+      "minCount": 0,
+      "description": "Component type markers"
+    }
+  ],
+  "expectedMetadata": [],
+  "viewport": {
+    "width": 1200,
+    "height": 800
+  },
+  "visualDiffThreshold": 0.05
+}

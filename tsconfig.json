@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM"],
+    "outDir": "./dist",
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noEmit": false,
+    "paths": {
+      "@engine/*": ["./engine/*"],
+      "@bench/*": ["./bench/*"],
+      "@providers/*": ["./providers/*"]
+    },
+    "baseUrl": "."
+  },
+  "include": ["engine/**/*", "bench/**/*", "providers/**/*"],
+  "exclude": ["node_modules", "dist", "bench/results"]
+}

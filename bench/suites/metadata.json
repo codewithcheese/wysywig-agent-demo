@@ -1,0 +1,46 @@
+{
+  "name": "metadata",
+  "description": "Metadata stress tests: preserve component props while making changes",
+  "prompts": [
+    {
+      "id": "metadata-style-001",
+      "category": "metadata",
+      "description": "Style DataBlock without removing markers",
+      "prompt": "Find any elements with data-gjs-type='data-block' and add styling to make them visually distinct (background color, padding, border). Do NOT modify or remove any data-gjs-* attributes.",
+      "expectedBehavior": "DataBlock styled, all markers preserved",
+      "markerSensitive": true
+    },
+    {
+      "id": "metadata-wrap-001",
+      "category": "metadata",
+      "description": "Wrap DataBlock in container",
+      "prompt": "Wrap any data-block components in a new container div for layout purposes. Preserve all data-gjs-* attributes on the original elements.",
+      "expectedBehavior": "Wrapper added, all markers on original elements preserved",
+      "markerSensitive": true
+    },
+    {
+      "id": "metadata-reorder-001",
+      "category": "metadata",
+      "description": "Reorder sections preserving markers",
+      "prompt": "Move the last major section to be the first section on the page. Preserve all data-gjs-* attributes and IDs exactly as they are.",
+      "expectedBehavior": "Section order changed, all markers preserved",
+      "markerSensitive": true
+    },
+    {
+      "id": "metadata-duplicate-001",
+      "category": "metadata",
+      "description": "Duplicate section preserving markers",
+      "prompt": "Duplicate the first major section and place the copy at the end. The copy should preserve the structure but you may change the data-gjs-id to avoid duplicates.",
+      "expectedBehavior": "Section duplicated with unique IDs",
+      "markerSensitive": true
+    },
+    {
+      "id": "metadata-noop-001",
+      "category": "metadata",
+      "description": "No-op test - return unchanged",
+      "prompt": "Return the HTML and CSS exactly as provided without any modifications. This is a verification test.",
+      "expectedBehavior": "Content unchanged, all markers preserved",
+      "markerSensitive": true
+    }
+  ]
+}

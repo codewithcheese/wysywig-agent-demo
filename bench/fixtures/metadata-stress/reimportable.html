@@ -1,0 +1,58 @@
+<div data-gjs-id="page-container-001" class="page-container">
+  <header data-gjs-id="header-001" class="page-header">
+    <h1 data-gjs-id="title-001">Data Dashboard</h1>
+    <p data-gjs-id="subtitle-001">Real-time metrics and analytics</p>
+  </header>
+
+  <section data-gjs-id="section-users-001" class="data-section">
+    <h2 data-gjs-id="section-title-001">User Statistics</h2>
+    <div
+      data-gjs-id="datablock-users-001"
+      data-gjs-type="data-block"
+      data-gjs-trait-dataPath="api/users/stats"
+      data-gjs-trait-limit="10"
+      data-gjs-trait-display="table"
+      data-gjs-trait-columns="[{&quot;key&quot;:&quot;name&quot;,&quot;label&quot;:&quot;User Name&quot;,&quot;tokenPath&quot;:&quot;user.name&quot;},{&quot;key&quot;:&quot;email&quot;,&quot;label&quot;:&quot;Email&quot;,&quot;tokenPath&quot;:&quot;user.email&quot;},{&quot;key&quot;:&quot;lastLogin&quot;,&quot;label&quot;:&quot;Last Login&quot;,&quot;tokenPath&quot;:&quot;user.lastLogin&quot;}]"
+      class="data-block data-block-table"
+    >
+      <div data-gjs-id="datablock-placeholder-001" class="data-block-placeholder">
+        <span data-gjs-id="placeholder-icon-001" class="placeholder-icon">📊</span>
+        <span data-gjs-id="placeholder-text-001">User Data Table</span>
+        <span data-gjs-id="placeholder-info-001" class="placeholder-info">Source: api/users/stats</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-gjs-id="section-orders-001" class="data-section">
+    <h2 data-gjs-id="section-title-002">Recent Orders</h2>
+    <div
+      data-gjs-id="datablock-orders-001"
+      data-gjs-type="data-block"
+      data-gjs-trait-dataPath="api/orders/recent"
+      data-gjs-trait-limit="5"
+      data-gjs-trait-display="grid"
+      data-gjs-trait-columns="[{&quot;key&quot;:&quot;orderId&quot;,&quot;label&quot;:&quot;Order ID&quot;},{&quot;key&quot;:&quot;customer&quot;,&quot;label&quot;:&quot;Customer&quot;},{&quot;key&quot;:&quot;total&quot;,&quot;label&quot;:&quot;Total&quot;},{&quot;key&quot;:&quot;status&quot;,&quot;label&quot;:&quot;Status&quot;}]"
+      class="data-block data-block-grid"
+    >
+      <div data-gjs-id="datablock-placeholder-002" class="data-block-placeholder">
+        <span data-gjs-id="placeholder-icon-002" class="placeholder-icon">📦</span>
+        <span data-gjs-id="placeholder-text-002">Orders Grid</span>
+        <span data-gjs-id="placeholder-info-002" class="placeholder-info">Source: api/orders/recent</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-gjs-id="section-notes-001" class="notes-section">
+    <h2 data-gjs-id="notes-title-001">Notes</h2>
+    <p data-gjs-id="notes-para-001">This dashboard displays live data from your connected APIs. Data blocks will automatically refresh when new data is available.</p>
+    <ul data-gjs-id="notes-list-001">
+      <li data-gjs-id="notes-item-001">User statistics update every 5 minutes</li>
+      <li data-gjs-id="notes-item-002">Orders refresh in real-time</li>
+      <li data-gjs-id="notes-item-003">Click on any row for detailed view</li>
+    </ul>
+  </section>
+
+  <footer data-gjs-id="footer-001" class="page-footer">
+    <p data-gjs-id="footer-text-001">Dashboard v2.1 | Last updated: 2024-12-31</p>
+  </footer>
+</div>

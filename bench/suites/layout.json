@@ -1,0 +1,46 @@
+{
+  "name": "layout",
+  "description": "Layout changes: columns, headers, footers, restructuring",
+  "prompts": [
+    {
+      "id": "layout-header-001",
+      "category": "layout",
+      "description": "Add a header section",
+      "prompt": "Add a header section at the top with a placeholder logo on the left and a navigation area on the right. The header should span the full width.",
+      "expectedBehavior": "New header element added, existing content preserved",
+      "markerSensitive": false
+    },
+    {
+      "id": "layout-footer-001",
+      "category": "layout",
+      "description": "Add a footer section",
+      "prompt": "Add a footer section at the bottom with placeholder text for copyright and contact information. The footer should span the full width.",
+      "expectedBehavior": "New footer element added, existing content preserved",
+      "markerSensitive": false
+    },
+    {
+      "id": "layout-twocol-001",
+      "category": "layout",
+      "description": "Convert to two-column layout",
+      "prompt": "Reorganize the main content into a two-column layout. Put the primary content in a wider left column (70%) and add a sidebar on the right (30%).",
+      "expectedBehavior": "Layout restructured, all content preserved",
+      "markerSensitive": true
+    },
+    {
+      "id": "layout-grid-001",
+      "category": "layout",
+      "description": "Convert list items to grid",
+      "prompt": "If there are list items or repeated sections, convert them to a responsive grid layout with 3 columns on desktop.",
+      "expectedBehavior": "List converted to grid, items preserved",
+      "markerSensitive": true
+    },
+    {
+      "id": "layout-wrap-001",
+      "category": "layout",
+      "description": "Wrap content in container",
+      "prompt": "Wrap all content in a centered container with a maximum width of 960px and horizontal auto margins.",
+      "expectedBehavior": "Wrapper added, content unchanged",
+      "markerSensitive": true
+    }
+  ]
+}

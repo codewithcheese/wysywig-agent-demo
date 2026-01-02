@@ -1,0 +1,43 @@
+{
+  "name": "metadata-stress",
+  "description": "Stress test for metadata preservation with custom DataBlock components",
+  "expectedMarkers": [
+    {
+      "pattern": "data-gjs-id",
+      "minCount": 10,
+      "description": "Component ID markers"
+    },
+    {
+      "pattern": "data-gjs-type=\"data-block\"",
+      "minCount": 2,
+      "description": "DataBlock component type markers"
+    },
+    {
+      "pattern": "data-gjs-trait-",
+      "minCount": 6,
+      "description": "Trait attribute markers"
+    }
+  ],
+  "expectedMetadata": [
+    {
+      "componentType": "data-block",
+      "traitName": "dataPath",
+      "mustExist": true
+    },
+    {
+      "componentType": "data-block",
+      "traitName": "limit",
+      "mustExist": true
+    },
+    {
+      "componentType": "data-block",
+      "traitName": "display",
+      "mustExist": true
+    }
+  ],
+  "viewport": {
+    "width": 1200,
+    "height": 1000
+  },
+  "visualDiffThreshold": 0.05
+}

@@ -1,0 +1,17 @@
+{
+  "name": "table-heavy",
+  "description": "A data-heavy layout with multiple tables",
+  "expectedMarkers": [
+    {
+      "pattern": "data-gjs-id",
+      "minCount": 15,
+      "description": "Component ID markers"
+    }
+  ],
+  "expectedMetadata": [],
+  "viewport": {
+    "width": 1200,
+    "height": 1000
+  },
+  "visualDiffThreshold": 0.05
+}
