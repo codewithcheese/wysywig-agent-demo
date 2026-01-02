@@ -151,8 +151,9 @@ export function extractDataBlockProps(html: string): DataBlockProps[] {
 
   for (const comp of components) {
     if (comp.type === 'data-block') {
+      // Note: HTML attributes are lowercased by the parser
       const props: DataBlockProps = {
-        dataPath: comp.traits['dataPath'] || '',
+        dataPath: comp.traits['datapath'] || '',
         limit: parseInt(comp.traits['limit'] || '10', 10),
         display: (comp.traits['display'] as 'table' | 'grid') || 'table',
         columns: [],
