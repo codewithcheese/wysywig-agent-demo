@@ -6,6 +6,8 @@
   "scripts": {
     "build": "tsc",
     "bench": "tsx bench/runner/cli.ts",
+    "bench:lite": "tsx bench/runner/cli.ts --fixture=simple-one-page --suite=cosmetic",
+    "bench:full": "tsx bench/runner/cli.ts",
     "bench:visual": "tsx bench/runner/cli.ts --visual",
     "test": "vitest run",
     "test:watch": "vitest"
